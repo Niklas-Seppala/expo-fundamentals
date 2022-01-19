@@ -1,5 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useContext, useEffect } from 'react';
+import { UserContext } from '../context/UserContext';
+import { users } from '../dev/mock';
 
 import { HomeScreen, ProfileScreen, FeedScreen } from '../screens/Screens';
 
@@ -12,6 +15,11 @@ export type RootStackParamList = {
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
 export function Navigator() {
+  const { setUser } = useContext(UserContext);
+  useEffect(() => {
+    setUser(users[Math.floor(Math.random() * 100)]);
+  }, [])
+
   return (
     <NavigationContainer>
       <RootStack.Navigator>
