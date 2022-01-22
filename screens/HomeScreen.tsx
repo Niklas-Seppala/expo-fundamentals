@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
     borderRadius: 5
   },
   buttonText: {
-    color: '#fff',
     fontSize: 16
   },
   navRow: {

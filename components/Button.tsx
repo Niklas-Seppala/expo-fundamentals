@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, } from 'react-native';
 import { TouchableOpacityProps, TextStyle, StyleProp } from 'react-native'
+import { Colors } from '../constant/Colors';
 
 type CustomButtonProps = TouchableOpacityProps & {
   textStyle?: StyleProp<TextStyle>,
@@ -20,7 +21,7 @@ export function CustomButton(props: CustomButtonProps) {
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: '#1a72c9',
+    backgroundColor: Colors.main,
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 25,
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5
   },
   text: {
-    color: '#fff',
+    color: '#000',
     fontSize: 20
   }
 })
